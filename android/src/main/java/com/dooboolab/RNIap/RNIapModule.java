@@ -283,7 +283,8 @@ public class RNIapModule extends ReactContextBaseJavaModule {
             item.putString("productId", json.getString("productId"));
             item.putString("transactionId", json.optString("orderId"));
             item.putString("transactionDate", String.valueOf(json.getLong("purchaseTime")));
-            item.putString("transactionReceipt", json.getString("originalJson"));
+            // Commented becauses "originalJson" value doesn't exist in json object
+            // item.putString("transactionReceipt", json.getString("originalJson"));
             item.putString("purchaseToken", json.getString("purchaseToken"));
             item.putString("dataAndroid", data);
             item.putString("signatureAndroid", signature);
